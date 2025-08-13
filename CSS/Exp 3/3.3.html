@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thank You!</title>
+  <style>
+    /*
+     * The body is set to a light gray background, and its flex properties
+     * are used to center the white content box on the page.
+     */
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: lightgray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+       .content-box {
+      background-color: white;
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    /* Styles for the main heading */
+    h1 {
+      font-size: 250%;
+      margin: 0;
+      color: blue;
+      text-align: center;
+    }
+    
+    /* Styles for the thank you message with a specific class */
+    .thanks {
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="content-box">
+    <h1>YOUR RESPONSE HAS BEEN RECORDED</h1>
+    <h1 class="thanks">THANK YOU!</h1>
+  </div>
+</body>
+</html>

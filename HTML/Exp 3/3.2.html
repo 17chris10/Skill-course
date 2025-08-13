@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form2</title>
+  <style>
+    h2 {
+      color: blue;
+    }
+    fieldset {
+      border: 1px solid blue;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 25px;
+    }
+    
+    legend {
+      font-size: 150%;
+      color: blue;
+      padding: 0 10px;
+      text-align: center;
+    }
+    
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+     form {
+      background-color: lightgray;
+      padding: 30px;
+      border-radius: 16px;
+      max-width: 600px;
+      margin: 20px auto;
+      color: blue;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 120%;
+      text-align: left;
+    }
+    .submit-button {
+      background-color: yellow;
+      color: white;
+      padding: 12px 30px;
+      font-family: Sofia, sans-serif;
+      font-size:125%;
+      margin-top:0px;
+      border-radius:16px;
+      transition: opacity 0.15s;
+      border-color:red;
+    }
+    .submit-button:hover{
+      opacity:0.7;
+      cursor:pointer;
+      box-shadow:1px 1px 0.15px black;
+    }
+    .submit-button:active{
+      opacity:0.15;
+    }
+    body
+   {
+      font-family: 'Sofia', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      color: white;
+   }
+   .heading{
+     margin-top:2px;
+     font-size:250%;
+     text-align:center;
+   }
+  </style>
+</head>
+<body>
+
+  <h2 class="heading">REGISTERATION DETAILS</h2>
+
+  <form action="action_page.php" target="_blank" method="post">
+  <fieldset>
+    <legend>Name:</legend>
+    <label for="fname">First Name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last Name:</label><br>
+ <input type="text" id="lname" name="lname"><br>
+  </fieldset>
+  <fieldset>
+    <legend>Password:</legend>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br>
+    <label for="confirm_password">Confirm Password:</label><br>
+    <input type="password" id="confirm_password" name="confirm_password" required><br>
+   </fieldset>
+   <fieldset>
+    <legend>Gender:</legend>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label><br>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label><br>
+      <label for="other">Other</label><br>
+      <input type="text" id="other" name="gender"><br>
+    </fieldset>  
+<label for="country">Country:</label>
+    <select id="country" name="country" required>
+      <option value="">--Select your country--</option>
+      <option value="usa">United States</option>
+      <option value="canada">Canada</option>
+      <option value="uk">United Kingdom</option>
+      <option value="australia">Australia</option>
+      <option value="india">India</option>
+    </select><br><br>
+    <label for="city">City:</label><br>
+    <input type="text" id="city" name="city"><br>
+    
+    <label for="email">Email Id:</label><br>
+    <input type="text" id="email" name="email"><br>
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob"><br>
+    <label for="pno">Phone no.:</label><br>
+    <input type="number" id="pno" name="pno"><br><br>
+<label for="profile_picture">Profile Picture:</label>
+    <input type="file" id="profile_picture" name="profile_picture" accept="image/*"><br><br>
+<fieldset>
+<legend>Hobbies:</legend>
+      <input type="checkbox" id="reading" name="hobbies[]" value="reading">
+      <label for="reading">Reading</label><br>
+      <input type="checkbox" id="sports" name="hobbies[]" value="sports">
+      <label for="sports">Sports</label><br>
+      <input type="checkbox" id="music" name="hobbies[]" value="music">
+      <label for="music">Music</label><br>
+      <input type="checkbox" id="traveling" name="hobbies[]" value="traveling">
+      <label for="traveling">Traveling</label><br>
+      <input type="checkbox" id="cooking" name="hobbies[]" value="cooking">
+      <label for="cooking">Cooking</label><br>
+</fieldset>
+    <button class="submit-button">
+      <a href="3.3.html">Submit</a>
+    </button>
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dribble and Shoot! Registration</title>
+  <style>
+    body {
+      font-family: 'Sofia', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      color: white;
+      
+      background-image: url("basketball.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    
+    form {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 16px;
+      max-width: 600px;
+      margin: 20px auto;
+      color: lightblue;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 120%;
+      text-align: left;
+    }
+    
+    .heading {
+      font-size: 250%;
+      text-align: center;
+      margin-top: 2px;
+      color: white;
+    }
+    
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="number"],
+    input[type="date"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+      border-radius: 8px;
+      border: 1px solid gray;
+    }
+    
+    input[type="file"] {
+        margin-bottom: 30px;
+    }
+
+    fieldset {
+      border: 1px solid white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 25px;
+    }
+    
+    legend {
+      font-size: 150%;
+      color: white;
+      padding: 0 10px;
+      text-align: center;
+    }
+    
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .submit-button {
+      background-color: green;
+      color: white;
+      padding: 12px 30px;
+      font-family: 'Sofia', sans-serif;
+      font-size: 125%;
+      border-radius: 16px;
+      border: 2px solid darkgreen;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    
+    .submit-button:hover {
+      background-color: darkgreen;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+    
+    .submit-button:active {
+      background-color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="heading">REGISTRATION DETAILS</h1>
+  <form action="action_page.php" target="_blank" method="post">
+    <fieldset class="Name">
+      <legend>Name:</legend>
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="fname">
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" name="lname">
+    </fieldset>
+    <fieldset class="Password">
+      <legend>Password:</legend>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <label for="confirm_password">Confirm Password:</label>
+      <input type="password" id="confirm_password" name="confirm_password" required>
+    </fieldset>
+    <fieldset class="gender">
+      <legend>Gender:</legend>
+      <label><input type="radio" id="male" name="gender" value="male"> Male</label>
+      <label><input type="radio" id="female" name="gender" value="female"> Female</label>
+      <label><input type="radio" id="other_radio" name="gender" value="other"> Other</label>
+      <input type="text" id="other_text" name="other_gender_text" placeholder="Specify if other">
+    </fieldset>
+    <label for="country">Country:</label>
+    <select id="country" name="country" required>
+      <option value="">--Select your country--</option>
+      <option value="usa">United States</option>
+      <option value="canada">Canada</option>
+      <option value="uk">United Kingdom</option>
+      <option value="australia">Australia</option>
+    </select>
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city">
+    <label for="email">Email Id:</label>
+    <input type="email" id="email" name="email">
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob">
+    <label for="pno">Phone no.:</label>
+    <input type="tel" id="pno" name="pno">
+    <label for="profile_picture">Profile Picture:</label>
+    <input type="file" id="profile_picture" name="profile_picture" accept="image/*">
+    <fieldset class="hobbies">
+      <legend>Hobbies:</legend>
+      <label><input type="checkbox" id="reading" name="hobbies[]" value="reading"> Reading</label>
+      <label><input type="checkbox" id="sports" name="hobbies[]" value="sports"> Sports</label>
+      <label><input type="checkbox" id="music" name="hobbies[]" value="music"> Music</label>
+      <label><input type="checkbox" id="traveling" name="hobbies[]" value="traveling"> Traveling</label>
+      <label><input type="checkbox" id="cooking" name="hobbies[]" value="cooking"> Cooking</label>
+    </fieldset>
+    <a href="3.3.html" class="submit-button">Submit</a>
+  </form>
+</body>
+</html>

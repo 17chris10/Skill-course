@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chriselle Bijoy | Web Developer Portfolio</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: lightgray;
+            color: black;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header {
+            background: darkslategray;
+            color: white;
+            padding: 16px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 19px;
+            font-style: italic;
+        }
+
+        nav {
+            background: gray;
+            color: white;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: dimgray;
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid silver;
+        }
+
+        h2 {
+            text-align: center;
+            color: darkblue;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-align: left;
+        }
+
+  
+        .project-card {
+            background: white;
+            border: 1px solid silver;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            color: blue;
+            margin-top: 0;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .skills-list li {
+            background: lightsteelblue;
+            color: darkblue;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: darkslategray;
+            color: white;
+            margin-top: 20px;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chriselle Bijoy</h1>
+        <p>Web Developer | Student</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">My Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main>
+            <section id="about">
+                <h2>About Me 🙋‍♀️</h2>
+                <div class="about-content">
+                         <div>
+                        <p>Hello! I'm Chriselle Bijoy, a passionate web developer with a love for creating compelling user experiences and solving complex problems. I'm always eager to learn new technologies and improve my skills.</p>
+                        <p>In my free time, I enjoy singing and playing the keyboard. It's a great way to unwind and get creative!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>My Projects 💻</h2>
+                <div class="project-card">
+                    <h3>IDEATHON</h3>
+                    <p>A university-organized competition where we proposed innovative ideas to solve current real-world problems. This experience sharpened my problem-solving and presentation skills.</p>
+                </div>
+                <div class="project-card">
+                    <h3>TECHNOPHILIA</h3>
+                    <p>An event organized by my department with various competitions. I participated in the **BugZapper Competition**, where I had to debug code under pressure. I successfully advanced to the second-last round, demonstrating my proficiency in debugging and code analysis.</p>
+                </div>
+            </section>
+
+            <section id="resume">
+                <h2>Resume 📝</h2>
+                <p><strong>Education:</strong> Diploma in Computer Science and Engineering | Dr. Vishwanath Karad MIT World Peace University</p>
+                <p><strong>Experience:</strong> No previous working experience.</p>
+                <div class="skills">
+                    <h3>Skills</h3>
+                    <ul class="skills-list">
+                        <li>Java</li>
+                        <li>C++</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contact Me 👋</h2>
+                <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+                <p>
+                    <strong>Email:</strong> <a href="mailto:chriselle.bijoy@mitwpu.edu.in">chriselle.bijoy@mitwpu.edu.in</a><br>
+                    <strong>GitHub:</strong> <a href="https://github.com/17chris10" target="_blank">github.com/17chris10</a>
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>2025 Chriselle Bijoy. All rights reserved.</p>
+    </footer>
+</body>
+</html>
