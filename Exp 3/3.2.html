@@ -6,11 +6,35 @@
     h2 {
       color: blue;
     }
-    form {
+    fieldset {
+      border: 1px solid blue;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 25px;
+    }
+    
+    legend {
+      font-size: 150%;
       color: blue;
-      font-family: Times New Roman;
-      font-size:120%;
-      padding:20px;
+      padding: 0 10px;
+      text-align: center;
+    }
+    
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+     form {
+      background-color: lightgray;
+      padding: 30px;
+      border-radius: 16px;
+      max-width: 600px;
+      margin: 20px auto;
+      color: blue;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 120%;
+      text-align: left;
     }
     .submit-button {
       background-color: yellow;
@@ -33,21 +57,17 @@
     }
     body
    {
-      background-color:lightgray;
-      font-size:125%;
+      font-family: 'Sofia', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      color: white;
    }
    .heading{
      margin-top:2px;
      font-size:250%;
      text-align:center;
    }
-   fieldset{
-     border:1px solid;
-     width: 50%;
-     margin-bottom:50px;
-   }
-   .gender{
-   margin-bottom:50px;}
   </style>
 </head>
 <body>
@@ -55,21 +75,21 @@
   <h2 class="heading">REGISTERATION DETAILS</h2>
 
   <form action="action_page.php" target="_blank" method="post">
-  <fieldset class="Name">
+  <fieldset>
     <legend>Name:</legend>
     <label for="fname">First Name:</label><br>
     <input type="text" id="fname" name="fname"><br>
     <label for="lname">Last Name:</label><br>
  <input type="text" id="lname" name="lname"><br>
   </fieldset>
-  <fieldset class="Password">
+  <fieldset>
     <legend>Password:</legend>
     <label for="password">Password:</label><br>
     <input type="password" id="password" name="password" required><br>
     <label for="confirm_password">Confirm Password:</label><br>
     <input type="password" id="confirm_password" name="confirm_password" required><br>
    </fieldset>
-   <fieldset class="gender">
+   <fieldset>
     <legend>Gender:</legend>
       <input type="radio" id="male" name="gender" value="male">
       <label for="male">Male</label><br>
@@ -98,7 +118,8 @@
     <input type="number" id="pno" name="pno"><br><br>
 <label for="profile_picture">Profile Picture:</label>
     <input type="file" id="profile_picture" name="profile_picture" accept="image/*"><br><br>
-<label>Hobbies:</label><br>
+<fieldset>
+<legend>Hobbies:</legend>
       <input type="checkbox" id="reading" name="hobbies[]" value="reading">
       <label for="reading">Reading</label><br>
       <input type="checkbox" id="sports" name="hobbies[]" value="sports">
@@ -109,6 +130,7 @@
       <label for="traveling">Traveling</label><br>
       <input type="checkbox" id="cooking" name="hobbies[]" value="cooking">
       <label for="cooking">Cooking</label><br>
+</fieldset>
     <button class="submit-button">
       <a href="3.3.html">Submit</a>
     </button>
