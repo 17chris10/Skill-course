@@ -1,160 +1,224 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Responsive Layout Demo</title>
+    <title>All About Birds</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* General Styling */
+        /* General body styling */
         body {
-            font-family: Arial, sans-serif;
-            margin: 0px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
             line-height: 1.6;
-            background-color: lightgray;
-            color: black;
+            background-color: rgb(244, 244, 249);
+            color: rgb(51, 51, 51);
         }
 
-        /* Flexbox for Header */
+        /* Flexbox for the header */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 40px;
-            background-color: blue;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 2em 4em;
+            background-color: rgb(0, 123, 255);
             color: white;
-        }
-        nav ul li a {
-            text-decoration: none;
-            padding: 15px;
-            display: block;
-            transition: background-color 0.3s ease;
+            box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.2);
         }
 
-        nav a {
-           text-align:center;
-            margin-left: 20px;
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-         nav {
-            background: blue;
-            color: white;
-            text-align: center;
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
         }
 
         nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
             display: flex;
-            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: black;
+        nav a {
+            color: white;
             text-decoration: none;
-            padding: 15px;
-            display: block;
-            transition: background-color 0.3s ease;
+            padding: 0 1em;
+            transition: color 0.3s ease;
+            font-size: 1.1em;
         }
 
-        nav ul li a:hover {
-            background-color: dimgray;
-            text-decoration: underline;
+        nav a:hover {
+            color: rgb(204, 229, 255);
         }
 
-        /* CSS Grid for Main Content */
-        main {
+        /* Full-width intro section */
+        .intro-section {
+            max-width: 60em;
+            margin: 3em auto;
+            padding: 2em;
+            background-color: white;
+            border-radius: 0.5em;
+            box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        /* New style for the main heading to make it stand out */
+        .intro-section h2 {
+            font-size: 2.5em; /* Larger font size */
+            margin-bottom: 0.5em;
+            color: rgb(0, 100, 200); /* A darker blue color */
+            border-bottom: 0.1em solid rgb(0, 100, 200); /* Add a bottom border */
+            padding-bottom: 0.2em; /* Spacing for the border */
+            display: inline-block; /* Makes the border fit the text */
+        }
+
+        .intro-section p {
+            font-size: 1.1em;
+        }
+
+        /* CSS Grid for the two-column grid layout */
+        .grid-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Two columns on large screens */
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 20px auto;
+            grid-template-columns: repeat(auto-fit, minmax(28em, 1fr));
+            gap: 1.5em;
+            max-width: 60em;
+            margin: 3em auto;
+            padding: 0 1.5em;
+        }
+
+        /* Styling for the individual grid sections within the main container */
+        .grid-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1em;
+            background-color: white;
+            padding: 1.5em;
+            border-radius: 0.5em;
+            box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.1);
+        }
+        
+        .grid-section h3 {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin: 0;
+            font-size: 1.8em;
         }
 
         .card {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: rgb(249, 249, 249);
+            padding: 1em;
+            border-radius: 0.4em;
+            text-align: center;
+            font-size: 1.1em;
         }
 
-        /* Flexbox for Footer */
+        .card.image-card {
+            grid-column: 1 / -1;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .card.image-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0.4em;
+        }
+
+        /* Flexbox for the footer */
         footer {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
-            background-color: black;
+            padding: 1.5em;
+            background-color: rgb(51, 51, 51);
             color: white;
+            text-align: center;
         }
-        h2{ 
-          text-align:center;
-        }
-        /* Responsive Design (Media Query) */
-        @media (max-width: 768px) {
-            /* Main grid changes to a single column */
-            main {
-                grid-template-columns: 1fr;
-            }
 
-            /* Header elements stack vertically */
+        footer p {
+            font-size: 1em;
+        }
+        
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 600px) {
             header {
                 flex-direction: column;
-                text-align: center;
+                padding: 1em;
             }
-
-            nav {
-                margin-top: 20px;
+            .logo {
+                margin-bottom: 0.5em;
+                font-size: 1.5em;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                padding: 0.3em 0;
+            }
+            .intro-section h2 {
+                font-size: 1.8em;
+            }
+            .grid-section {
+                grid-template-columns: 1fr;
+            }
+            .grid-section h3 {
+                font-size: 1.5em;
             }
         }
     </style>
 </head>
 <body>
-    <h1 style = "text-align:center;">Birds</h1>
-       <div>
-         <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">My Projects</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</div>
-    <section id="intro">
-                <h2>Introduction</h2>
-                <div class="about-content">
-                         <div>
-      <li>Birds are classified as endothermic vertebrates, so they can regulate their own temperature and have an inner skeleton, which is hollow, by the way, to allow easy flight.</li>
-      <li>In addition, they have feathers, wings, and a spindle-shaped body to make the flight comfortable.</li>
-      <li>Instead of a mouth with teeth, these curious animals have a beak. Also, they are bipedal, meaning they use only two legs for walking.</li>
-   </p></div>
-    <main>
-        <section class="card">
-            <h2>The B</h2>
-            <p>This is the first item in the grid, which uses two columns on a larger screen.</p>
+
+    <header>
+        <div class="logo">🐦 Bird World</div>
+        <nav>
+            <ul>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#types">Types</a></li>
+                <li><a href="#facts">Facts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="intro-section" id="intro">
+        <h2>Introduction to Birds</h2>
+        <p>Birds are a group of warm-blooded vertebrates constituting the class Aves, characterized by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton. They live worldwide and range in size from the tiny bee hummingbird to the huge ostrich.</p>
+    </div>
+
+    <main class="grid-container">
+        <section class="grid-section" id="types">
+            <h3>Type: Birds of Prey</h3>
+            <div class="card image-card">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240405165951/Falcon-vs-Eagle----Difference-between-Falcon-&-Eagle.webp" alt="A majestic eagle, a bird of prey."/>
+            </div>
         </section>
-        <section class="card">
-            <h2>Item 2</h2>
-            <p>The grid automatically positions this item and handles spacing between them.</p>
+
+        <section class="grid-section">
+            <h3>Type: Water Birds</h3>
+            <div class="card image-card">
+                <img src="https://scontent.fpnq7-4.fna.fbcdn.net/v/t1.6435-9/117387579_3234584483289846_2694910944477296201_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=EVdXYg70WPUQ7kNvwH09bJD&_nc_oc=AdnW6hxf5GtGH5SxjyIHltMQFWHpQdS5mVBxdaG3UcdNtCimTc_-K8P9yIzyy_Mxhl8&_nc_zt=23&_nc_ht=scontent.fpnq7-4.fna&_nc_gid=Gv006mJKEAV2jCr2Zuz-uQ&oh=00_AfY3UHaydyMvKxCaZLgM1m4mmnRL0rcMPUTYV02CKhy2-Q&oe=68E4F03E" alt="duck vs swan"/>
+            </div>
+
         </section>
-        <section class="card">
-            <h2>Item 3</h2>
-            <p>A media query will trigger on smaller screens, changing the layout to a single column.</p>
+
+        <section class="grid-section" id="facts">
+            <h3>Facts: Hummingbirds</h3>
+            <div class="card">Tiny Size</div>
+            <div class="card">Hovering</div>
+            <div class="card">Fast Heartbeat</div>
+            <div class="card">Feather Colors</div>
         </section>
-        <section class="card">
-            <h2>Item 4</h2>
-            <p>The layout is responsive, showing how the design adapts to different widths.</p>
+        
+        <section class="grid-section">
+            <h3>Facts: Flightless Birds</h3>
+<div class="card image-card">
+            <img src="https://m.media-amazon.com/images/I/81Y7RkYOuKL._UF1000,1000_QL80_.jpg" alt="ostrich vs emu"/>
+            </div>
+
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Layout Demo</p>
+        <p>&copy; 2025 Bird World</p>
     </footer>
 
 </body>
