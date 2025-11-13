@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Card Layout</title>
+        <style>
+            body {
+                background-color: #f5f5dc;
+                font-family: 'Times New Roman', Times, serif;
+                margin: 0;
+                padding: 0;
+            }
+            h1 {
+                color: crimson;
+                text-align: center;
+                font-size: 70px;
+                margin-top: 40px;
+            }
+            p {
+                line-height: 40px;
+                font-size: 30px;
+                text-align: center;
+            }
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 40px;
+                padding: 40px;
+                justify-items: center;
+                background-color: beige;
+            }
+            .product-card {
+                border: 2px solid black;
+                border-radius: 25px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                padding: 20px;
+                text-align: center;
+                background-color: white;
+                width: 280px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .product-card:hover {
+                transform: translateY(-10px) scale(1.03);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+                cursor: pointer;
+            }
+            .product-card img {
+                width: 100%;
+                border-radius: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>PRODUCTS!!</h1>
+        <div class="grid-container">
+            <div class="product-card">
+                <img src="https://e0.365dm.com/25/02/2048x1152/skysports-premier-league-ball_6831748.jpg?20250217160059" alt="Football">
+                <p><b><i>Football</i></b><br>Price: Rs. 300<br>Rating: ⭐⭐⭐</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTZjh17q7NWXY1iRWEXx5us_ZF-tuWVF9EmJvM9fyOeiVl_FMcCgDI1qHgz5ecYciOZuvXRS273PAlXlGEy61zZhg87QA4c8hslUT3s_ngrUNPcVp7896-IIQ" alt="Kurta for women">
+                <p><b><i>Kurta</i></b><br>Gender: Female<br>Price: Rs. 1300<br>Rating: ⭐⭐⭐⭐</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcREmFAZI8E-t7gALn-MiK9iSRmVUdznDWDRKaqr7wV1X9IbEvrugK7xd81aEjYMXc5EozMDWCHcdy3OEbAtiW1r-LSETMmk8ESOHeuJLYl5faOi5FSae7sKbw" alt="Wrist Watch">
+                <p><b><i>Wrist Watch</i></b><br>Brand: Seiko<br>Price: Rs. 5500<br>Rating: ⭐⭐⭐⭐</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/61CGHv6kmWL._AC_SL1500_.jpg" alt="Headphones">
+                <p><b>Wireless Headphones</b><br>Brand: JBL<br>Price: Rs. 2500<br>Rating: ⭐⭐⭐⭐⭐</p>
+            </div>
+        </div>
+    </body>
+</html>
